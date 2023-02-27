@@ -1,0 +1,41 @@
+        Version: 3 (0x2)
+        Serial Number: 1211551877 (0x4836d085)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = IT, O = ITERDS, OU = ITERDS test services, CN = ITERDS Root CA
+        Validity
+            Not Before: May 11 16:29:51 2022 GMT
+            Not After : Jun  1 16:29:51 2038 GMT
+        Subject: C = IT, O = ITERDS, OU = ITERDS test services, CN = ITERDS Intermediate CA
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (4096 bit)
+                    e4:af:3f
+                Exponent: 65537 (0x10001)
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier: 
+                0A:5C:51:8D:D7:DB:8A:66:88:2D:DE:47:CA:69:C2:84:36:29:6B:F1
+            X509v3 Authority Key Identifier: 
+                keyid:8A:60:30:49:50:A7:83:57:36:F9:ED:85:6C:4E:3B:01:4C:3F:4A:60
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Certificate Policies: 
+                Policy: 0.4.0.195222
+                  CPS: http://uri.etsi.org/19522/v1#
+                    Organization: IT AgID supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for ERDS services by supervision authority of country IT
+                Policy: 0.4.0.195223
+                  CPS: http://uri.etsi.org/19522/v1#ERDSEvidence
+                    Organization: IT AgID supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for ERDS evidence by supervision authority of country IT
+                Policy: 0.4.0.195324
+                  CPS: http://uri.etsi.org/19532/v1#/REMbaseline
+                  CPS: https://eidas.agid.gov.it/REM/rem-policy-it#certificate-policy
+                    Organization: IT AgID supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for REM baseline service by supervision authority of country IT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         a0:4e:c6:dd:90:82:03:c3

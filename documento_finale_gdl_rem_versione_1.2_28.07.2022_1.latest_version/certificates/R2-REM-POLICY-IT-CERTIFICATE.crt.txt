@@ -1,0 +1,38 @@
+        Version: 3 (0x2)
+        Serial Number: 1211551879 (0x4836d087)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = IT, O = ITERDS, OU = ITERDS test services, CN = ITERDS Intermediate CA
+        Validity
+            Not Before: May 11 16:30:43 2022 GMT
+            Not After : May 19 16:30:43 2036 GMT
+        Subject: C = IT, O = ITERDS, OU = ITERDS test services, CN = R2-REMS provider
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                    85:db
+                Exponent: 65537 (0x10001)
+            X509v3 Subject Key Identifier: 
+                1C:42:E0:73:13:37:71:BC:6F:F6:1E:2F:CB:6A:32:9F:50:76:22:AC
+            X509v3 Authority Key Identifier: 
+                keyid:0A:5C:51:8D:D7:DB:8A:66:88:2D:DE:47:CA:69:C2:84:36:29:6B:F1
+
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                E-mail Protection
+            X509v3 Subject Alternative Name: 
+                email:rem-service@r2-rems-only-for-test.it
+            X509v3 Certificate Policies: 
+                Policy: 0.4.0.195223
+                  CPS: http://uri.etsi.org/19522/v1#ERDSEvidence
+                    Organization: IT AgID supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for ERDS evidence by supervision authority of country IT
+                Policy: 0.4.0.195324
+                  CPS: http://uri.etsi.org/19532/v1#/REMbaseline
+                  CPS: https://eidas.agid.gov.it/REM/rem-policy-it#certificate-policy
+                    Organization: IT AgID REMID authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for REM baseline by REMID authority of country IT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         f4:c9:a2:65:32:51:fc:12

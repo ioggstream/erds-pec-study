@@ -1,0 +1,23 @@
+        Version: 3 (0x2)
+        Serial Number: 1211551876 (0x4836d084)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = IT, O = ITERDS, OU = ITERDS test services, CN = ITERDS Root CA
+        Validity
+            Not Before: May 11 16:29:50 2022 GMT
+            Not After : Jun  8 16:29:50 2038 GMT
+        Subject: C = IT, O = ITERDS, OU = ITERDS test services, CN = ITERDS Root CA
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (4096 bit)
+                    ee:50:e1
+                Exponent: 65537 (0x10001)
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier: 
+                8A:60:30:49:50:A7:83:57:36:F9:ED:85:6C:4E:3B:01:4C:3F:4A:60
+            X509v3 Authority Key Identifier: 
+                keyid:8A:60:30:49:50:A7:83:57:36:F9:ED:85:6C:4E:3B:01:4C:3F:4A:60
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+    Signature Algorithm: sha256WithRSAEncryption
+         2c:b2:4d:4e:18:34:76:24
