@@ -1,0 +1,13 @@
+
+Registered domains to R-REMS-B provider:
+   rb-rems.rem
+   rcp2domain.rem
+Note: both of these can be used as user's domain registering users on the service
+
+MX record for any of these:
+rb-rems.rem           mail exchanger = 10 mx.rb-rems.rem.
+rcp2domain.rem.rem    mail exchanger = 10 mx.rb-rems.rem.
+  --> The name to configure in TL ServiceSupplyPoint is: mx.rb-rems.rem
+
+A record for the MX:
+mx.rb-rems.rem: <IP of the boundary REM server B>

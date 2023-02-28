@@ -1,0 +1,2 @@
+Due to the previous condition the DSN issued for the error is sent back to the sender.
+It is a local/best practice matter if and how map this error to a RelayToNonERDSFailure(RF03), since this event doesn't affect the interoperability between REMSPs.

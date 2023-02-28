@@ -1,0 +1,14 @@
+
+Registered domains to S-REMS-A provider:
+   sa-rems.rem
+   senderdomain.rem
+Note: both of these can be used as user's domain registering users on the service
+
+
+MX record for any of these:
+sa-rems.rem         mail exchanger = 10 mx.sa-rems.rem.
+senderdomain.rem    mail exchanger = 10 mx.sa-rems.rem.
+  --> The name to configure in TL ServiceSupplyPoint is: mx.sa-rems.rem
+
+A record for the MX:
+mx.sa-rems.rem: <IP of the boundary REM server A>

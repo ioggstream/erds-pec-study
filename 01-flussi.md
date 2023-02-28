@@ -8,8 +8,11 @@ i sotto flussi opzionali e/o gli errori gestiti)
 sono riportati in Figure 9, Figure 10, Figure
 11, Figure 12, Figure 13 e Figure 14.
 
+[Regole tecniche]: https://trasparenza.agid.gov.it/moduli/downloadFile.php?file=oggetto_allegati/22221824510O__ODocumento+finale+regole+tecniche+rem+versione+1.0+03.08.2022.pdf#p=44
 
 ## Registered to unregisterd users
+
+[regole tecniche] p. 44
 
 ```mermaid
 ---
@@ -37,6 +40,7 @@ sequenceDiagram
     A->>S: Retrieve the SubmissionAcceptance REM receipt
     activate S
     S-->>A: ""
+    note right of A: The sender could retrieve the <br> receipt at any time
     deactivate S
     deactivate A
     deactivate A

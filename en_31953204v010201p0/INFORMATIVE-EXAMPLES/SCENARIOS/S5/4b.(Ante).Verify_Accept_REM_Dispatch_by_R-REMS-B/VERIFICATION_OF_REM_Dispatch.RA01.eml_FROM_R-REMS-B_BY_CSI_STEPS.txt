@@ -1,0 +1,2 @@
+See EN 319 532-4 C.4.5.2 [ items a)/I, a)II, h)I ], clauses D.4.3 and
+the COMMON_SERVICE_INTERFACE section of the present suite of examples.

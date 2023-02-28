@@ -1,0 +1,2 @@
+See EN 319 532-4, clauses C.2.3.3.3, C.2.3.4.3, C.2.3.4.4 [item c.3.5.1], C.2.3.4.5 and
+the COMMON_SERVICE_INTERFACE section of the present suite of examples.

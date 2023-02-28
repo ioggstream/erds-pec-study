@@ -1,0 +1,1 @@
+Some impediment prevents the issuing or the consignment of a ContentConsignment/ContentConsignmentFailure REM receipt. This flow of the transaction stops here.

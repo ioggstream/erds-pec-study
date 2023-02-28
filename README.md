@@ -1,13 +1,16 @@
-# .github
+# Data files and schemas for REM and PEC
 
-Repository for boilerplate workflows and CI for python projects.
+
+## Files
 
 ```bash
-.bandit.yaml
-.pre-commit-config.yaml
-.github
-└── workflows
+.
+├── documento_finale_gdl_rem_versione_1.2_28.07.2022_1.latest_version
+├── en_31953204v010201p0
+├── tests
+└── ts_119612v020201p0  # from https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.02.01_60/
 ```
+
 
 ## Contributing
 

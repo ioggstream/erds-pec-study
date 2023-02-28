@@ -1,0 +1,42 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1211551872 (0x4836d080)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=GlobalERDS Intermediate CA
+        Validity
+            Not Before: Nov 22 20:36:21 2021 GMT
+            Not After : Oct  3 20:36:21 2035 GMT
+        Subject: C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=SA-REMS provider
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                F5:D1:60:4E:E0:DD:B5:59:32:EF:9A:5B:98:3F:3B:4A:73:DB:2C:D8
+            X509v3 Authority Key Identifier: 
+                keyid:FA:40:3E:FE:74:C5:07:7D:71:7E:F3:C3:DA:31:59:A3:E0:31:60:BC
+
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                E-mail Protection
+            X509v3 Subject Alternative Name: 
+                email:rem-service@sa-rems.rem
+            X509v3 Certificate Policies: 
+                Policy: 0.4.0.195223
+                  CPS: http://uri.etsi.org/19522/v1#ERDSEvidence
+                  User Notice:
+                    Organization: CC supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for ERDS evidence by supervision authority of country CC
+                Policy: 0.4.0.195324
+                  CPS: http://uri.etsi.org/19532/v1#/REMbaseline
+                  CPS: https://CC-remid-authority.cc/remid-policy-en#certificate-policy
+                  User Notice:
+                    Organization: CC REMID authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for REM baseline by REMID authority of country CC
+
+    Signature Algorithm: sha256WithRSAEncryption

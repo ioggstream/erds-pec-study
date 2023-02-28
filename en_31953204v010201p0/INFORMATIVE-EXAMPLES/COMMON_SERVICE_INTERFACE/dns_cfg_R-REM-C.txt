@@ -1,0 +1,11 @@
+
+Registered domains to R-REMS-C provider:
+   rc-rems.rem
+Note: In this case such domain can be used as user's domain registering users on the service provider C
+
+MX record for any of these:
+rc-rems.rem           mail exchanger = 10 mx.rc-rems.rem.
+  --> The name to configure in TL ServiceSupplyPoint is: mx.rc-rems.rem
+
+A record for the MX:
+mx.rc-rems.rem: <IP of the boundary REM server C>
