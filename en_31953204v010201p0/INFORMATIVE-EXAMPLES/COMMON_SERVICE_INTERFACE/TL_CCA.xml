@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This document is an example for ETSI EN 319 532-4 xsd definitions and represents:
+  1. the namespaces definitions relevant to a TL exemplification for REM baseline
+  2. a Trusted List (TL) XML structure composed by:
+     - TrustServiceStatusList
+-->
+
+<TrustServiceStatusList
+  xmlns="http://uri.etsi.org/02231/v2#"
+  TSLTag="http://uri.etsi.org/19612/TSLTag"
+  xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+  Id="TrustServiceStatusList-ERDS-Example">
+  <SchemeInformation>
+    <TSLVersionIdentifier>1</TSLVersionIdentifier>
+    <TSLSequenceNumber>1</TSLSequenceNumber>
+    <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+    <SchemeOperatorName>
+      <Name xml:lang="en">CCA Supervision Agency</Name>
+      <Name xml:lang="cca">TBD in CCA language</Name>
+    </SchemeOperatorName>
+    <SchemeOperatorAddress>
+      <PostalAddresses>
+        <PostalAddress xml:lang="en">
+          <StreetAddress>CCA Supervision Agency address</StreetAddress>
+          <Locality>CCA locality</Locality>
+          <PostalCode>CCA postal code</PostalCode>
+          <CountryName>CCA</CountryName>
+        </PostalAddress>
+        <PostalAddress xml:lang="cca">
+          <StreetAddress>TBD in CCA language</StreetAddress>
+          <Locality>TBD in CCA language</Locality>
+          <PostalCode>CCA postal code</PostalCode>
+          <CountryName>CCA</CountryName>
+        </PostalAddress>
+      </PostalAddresses>
+      <ElectronicAddress>
+        <URI xml:lang="en">mailto:eIDAS@CCA-supervision-agency.cca</URI>
+        <URI xml:lang="en">https://www.CCA-supervision-agency.cca</URI>
+      </ElectronicAddress>
+    </SchemeOperatorAddress>
+    <SchemeName>
+      <Name xml:lang="en">CCA:Trusted list for ERDS services</Name>
+      <Name xml:lang="cca">CCA:TBD in CCA language</Name>
+    </SchemeName>
+    <SchemeInformationURI>
+      <URI xml:lang="en">https://CCA-supervision-agency.cca/tl-en.html</URI>
+      <URI xml:lang="cca">https://CCA-supervision-agency.cca/tl-cca.html </URI>
+    </SchemeInformationURI>    <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+    <SchemeTypeCommunityRules>
+      <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+      <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CCA</URI>
+    </SchemeTypeCommunityRules>
+    <SchemeTerritory>CCA</SchemeTerritory>
+    <PolicyOrLegalNotice>
+      <TSLLegalNotice xml:lang="en">The applicable legal </TSLLegalNotice>
+      <TSLLegalNotice xml:lang="cca">TBD in CCA language </TSLLegalNotice>
+    </PolicyOrLegalNotice>
+    <HistoricalInformationPeriod>12345</HistoricalInformationPeriod>
+    <PointersToOtherTSL>
+      <OtherTSLPointer>
+        <ServiceDigitalIdentities>
+          <ServiceDigitalIdentity>
+            <DigitalId>
+              <X509Certificate>QUJDMTIzCg==</X509Certificate>
+            </DigitalId>
+          </ServiceDigitalIdentity>
+        </ServiceDigitalIdentities>
+        <TSLLocation>https://ec.europa.eu/tools/lotl/eu-lotl.xml</TSLLocation>
+        <AdditionalInformation>
+          <OtherInformation>
+            <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+          </OtherInformation>
+          <!--[OMISSIS]-->
+        </AdditionalInformation>
+      </OtherTSLPointer>
+    </PointersToOtherTSL>
+    <ListIssueDateTime>2020-10-03T08:30:00Z</ListIssueDateTime>
+    <NextUpdate>
+      <dateTime>2021-10-03T08:29:59Z</dateTime>
+    </NextUpdate>
+    <DistributionPoints>
+      <URI>https://CCA-supervision-agency.cca/TL-CCA.xml</URI>
+    </DistributionPoints>
+  </SchemeInformation>
+  <TrustServiceProviderList>
+    <TrustServiceProvider>
+      <TSPInformation>
+        <TSPName>
+          <Name xml:lang="cca">S-REMS-A provider</Name>
+          <Name xml:lang="en">S-REMS-A provider</Name>
+        </TSPName>
+        <TSPTradeName>
+          <Name xml:lang="en">VATCCA-12345678910</Name>
+          <Name xml:lang="en">S-REMS-A provider international trade name</Name>
+        </TSPTradeName>
+        <TSPAddress>
+          <PostalAddresses>
+            <PostalAddress xml:lang="en">
+              <StreetAddress>S-REMS-A provider street address</StreetAddress>
+              <Locality>S-REMS-A provider locality</Locality>
+              <PostalCode>S-REMS-A provider postal code</PostalCode>
+              <CountryName>CCA</CountryName>
+            </PostalAddress>
+          </PostalAddresses>
+          <ElectronicAddress>
+            <URI xml:lang="en">https://sa-rems.rem</URI>
+            <URI xml:lang="en">mailto:rem-provider-a@sa-rems.rem</URI>
+          </ElectronicAddress>
+        </TSPAddress>
+        <TSPInformationURI>
+            <URI xml:lang="en">https://sa-rems.rem</URI>
+        </TSPInformationURI>
+      </TSPInformation>
+      <TSPServices>
+            <!--[SERVICE PROVIDER A]-->
+        <TSPService>
+          <ServiceInformation>
+            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q</ServiceTypeIdentifier>
+            <ServiceName>
+              <Name xml:lang="en">SA-REMS provider</Name>
+              <Name xml:lang="cca">SA-REMS provider</Name>
+            </ServiceName>
+            <ServiceDigitalIdentity>
+              <DigitalId>
+                <X509Certificate>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</X509Certificate>
+              </DigitalId>
+              <DigitalId>
+                <X509SubjectName>C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=SA-REMS provider</X509SubjectName>
+              </DigitalId>
+              <DigitalId>
+                <X509SKI>9dFgTuDdtVky75pbmD87SnPbLNg=</X509SKI>
+              </DigitalId>
+            </ServiceDigitalIdentity>
+            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <StatusStartingTime>2021-12-30T22:00:00Z</StatusStartingTime>
+            <SchemeServiceDefinitionURI>
+              <URI xml:lang="en">https://TBD/OptionalSchemeDefinitionByTLSOMakingReferenceToREMBaseline.html</URI>
+            </SchemeServiceDefinitionURI>
+            <ServiceSupplyPoints>
+              <ServiceSupplyPoint>smtp:mx.sa-rems.rem:25</ServiceSupplyPoint>
+              <ServiceSupplyPoint>https://rem-provider-a-service.cca/CapabilityAndSecurityMetadata.xml</ServiceSupplyPoint>
+            </ServiceSupplyPoints>
+            <TSPServiceDefinitionURI>
+              <URI xml:lang="en">https://rem-provider-a-service.cca/index-en.html</URI>
+              <URI xml:lang="cca">https://rem-provider-a-service.cca/index-cca.html</URI>
+            </TSPServiceDefinitionURI>
+          </ServiceInformation>
+          <ServiceHistory>
+            <!--[OMISSIS]-->
+          </ServiceHistory>
+        </TSPService>
+        <TSPService>
+            <!--[SERVICE PROVIDER B]-->
+          <ServiceInformation>
+            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q</ServiceTypeIdentifier>
+            <ServiceName>
+              <Name xml:lang="en">RB-REMS provider</Name>
+              <Name xml:lang="ccb">RB-REMS provider</Name>
+            </ServiceName>
+            <ServiceDigitalIdentity>
+              <DigitalId>
+                <X509Certificate>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</X509Certificate>
+              </DigitalId>
+              <DigitalId>
+                <X509SubjectName>C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=RB-REMS provider</X509SubjectName>
+              </DigitalId>
+              <DigitalId>
+                <X509SKI>YVgk2QiaHV7ykf7R87i5VfnIqGI=</X509SKI>
+              </DigitalId>
+            </ServiceDigitalIdentity>
+            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <StatusStartingTime>2021-12-30T22:00:00Z</StatusStartingTime>
+            <SchemeServiceDefinitionURI>
+              <URI xml:lang="en">https://TBD/OptionalSchemeDefinitionByTLSOMakingReferenceToREMBaseline.html</URI>
+            </SchemeServiceDefinitionURI>
+            <ServiceSupplyPoints>
+              <ServiceSupplyPoint>smtp:mx.rb-rems.rem:25</ServiceSupplyPoint>
+              <ServiceSupplyPoint>https://rem-provider-b-service.ccb/CapabilityAndSecurityMetadata.xml</ServiceSupplyPoint>
+            </ServiceSupplyPoints>
+            <TSPServiceDefinitionURI>
+              <URI xml:lang="en">https://rem-provider-b-service.ccb/index-en.html</URI>
+              <URI xml:lang="ccb">https://rem-provider-b-service.ccb/index-ccb.html</URI>
+            </TSPServiceDefinitionURI>
+          </ServiceInformation>
+          <ServiceHistory>
+            <!--[OMISSIS]-->
+          </ServiceHistory>
+        </TSPService>
+        <TSPService>
+            <!--[SERVICE PROVIDER C]-->
+          <ServiceInformation>
+            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q</ServiceTypeIdentifier>
+            <ServiceName>
+              <Name xml:lang="en">RC-REMS provider</Name>
+              <Name xml:lang="ccc">RC-REMS provider</Name>
+            </ServiceName>
+            <ServiceDigitalIdentity>
+              <DigitalId>
+                <X509Certificate>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</X509Certificate>
+              </DigitalId>
+              <DigitalId>
+                <X509SubjectName>C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=RC-REMS provider</X509SubjectName>
+              </DigitalId>
+              <DigitalId>
+                <X509SKI>gz4Y/+n5Nav/j2e4wEL/4eJqIdc=</X509SKI>
+              </DigitalId>
+            </ServiceDigitalIdentity>
+            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <StatusStartingTime>2021-12-30T22:00:00Z</StatusStartingTime>
+            <SchemeServiceDefinitionURI>
+              <URI xml:lang="en">https://TBD/OptionalSchemeDefinitionByTLSOMakingReferenceToREMBaseline.html</URI>
+            </SchemeServiceDefinitionURI>
+            <ServiceSupplyPoints>
+              <ServiceSupplyPoint>smtp:mx.rc-rems.rem:25</ServiceSupplyPoint>
+              <ServiceSupplyPoint>https://rem-provider-c-service.ccc/CapabilityAndSecurityMetadata.xml</ServiceSupplyPoint>
+            </ServiceSupplyPoints>
+            <TSPServiceDefinitionURI>
+              <URI xml:lang="en">https://rem-provider-c-service.ccc/index-en.html</URI>
+              <URI xml:lang="ccc">https://rem-provider-c-service.ccc/index-ccc.html</URI>
+            </TSPServiceDefinitionURI>
+          </ServiceInformation>
+          <ServiceHistory>
+            <!--[OMISSIS]-->
+          </ServiceHistory>
+        </TSPService>
+      </TSPServices>
+    </TrustServiceProvider>
+  </TrustServiceProviderList>
+  <!-- XAdES signature as per the common best practice of any country's scheme operator 
+  <dsig:Signature> </dsig:Signature>
+  -->
+</TrustServiceStatusList>

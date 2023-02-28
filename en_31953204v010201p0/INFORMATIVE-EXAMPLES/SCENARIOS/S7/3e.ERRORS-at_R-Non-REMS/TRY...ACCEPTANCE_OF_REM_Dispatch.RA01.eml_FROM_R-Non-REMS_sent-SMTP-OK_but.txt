@@ -1,0 +1,1 @@
+Some impediment prevents the correct processing of the REM dispatch to this Non-REM service provider. The SMTP transaction is closed with a positive answer but a further DSN is issued.

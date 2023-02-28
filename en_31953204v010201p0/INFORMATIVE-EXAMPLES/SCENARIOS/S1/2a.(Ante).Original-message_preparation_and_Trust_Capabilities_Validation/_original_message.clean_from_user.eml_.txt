@@ -1,0 +1,10 @@
+From: "Sender name" <sender@senderdomain.rem>
+To: <rcp1@rb-rems.rem>, <rcp2@rcp2domain.rem>, <rcp3@rc-rems.rem>, <rcp4@non-rem-domain.nrem>
+Subject: Purchase order #1237
+Date: Wed, 01 Dec 2021 22:04:39 +0100
+Message-ID: <30be01d30072$d36e846d$f9b72bf0$@de>
+Content-Type: text/plain; charset=UTF-8
+
+   This is the user's body of the original message built taking inspiration 
+   from the examples and figures present in ETSI EN 319 532-3 and in the 
+   ETSI EN 319 532-4 updated with the REM baseline.

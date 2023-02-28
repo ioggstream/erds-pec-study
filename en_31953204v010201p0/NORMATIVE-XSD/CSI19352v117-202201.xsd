@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CapabilityAndSecurityInformation (REMS capabilities) -->
+
+<!--                  ****** NOTICE ******
+The present document is part of ETSI EN 319 532-4 and represents:
+  1. the namespaces definitions and
+  2. the required imports and
+  3. the schema definitions for REM baseline Capability and Security Information (CSI) are composed of:
+     - Capability Information (CI)
+         - CapabilityMetadata
+             - ERDSMetadata
+     - Security Information (SI)
+         - SecurityMetadata
+             - CapabilityBasedSecurity
+-->
+
+<xsd:schema targetNamespace="http://uri.etsi.org/19532/v1#"
+		xmlns="http://uri.etsi.org/19532/v1#"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tl="http://uri.etsi.org/02231/v2#"
+		xmlns:ci="http://uri.etsi.org/19522/v1#"
+		xmlns:si="http://uri.etsi.org/19532/v1#"
+		xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+		elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<!-- *** Imports facility section *** -->
+
+	<!-- schemaLocation="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd"/> -->
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
+		schemaLocation="xmldsig-core-schema.xsd"/>
+
+	<!-- schemaLocation="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd"/> -->
+	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#"
+		schemaLocation="xenc-schema.xsd"/>
+
+	<!-- schemaLocation="http://www.w3.org/2001/xml.xsd"/> -->
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace"
+		schemaLocation="xml.xsd"/>
+
+	<!-- schemaLocation="http://docs.oasis-open.org/security/saml/v2.0/saml-schema-assertion-2.0.xsd"/> -->
+	<xsd:import namespace="urn:oasis:names:tc:SAML:2.0:assertion"
+		schemaLocation="saml-schema-assertion-2.0.xsd"/>
+
+	<xsd:import namespace="http://uri.etsi.org/19522/v1#"
+		schemaLocation="ERDS19522v111-201902v0.0.5.xsd"/>
+
+	<!-- schemaLocation="https://uri.etsi.org/19612/v2.2.1/ts_119612v020201_201601xsd.xsd"/> -->
+	<xsd:import namespace="http://uri.etsi.org/02231/v2#"
+		schemaLocation="ts_119612v020201_201601xsd.xsd"/>
+
+	<!-- ROOT Element: CapabilityAndSecurityInformation (CSI) -->
+	<xsd:element name="CapabilityAndSecurityInformation" type="CapabilityAndSecurityInformationType"/>
+		
+	<xsd:complexType name="CapabilityAndSecurityInformationType">
+		<xsd:sequence>
+			<xsd:element ref="SchemeData"/>		
+			<xsd:element ref="CapabilityMetadata"/>
+			<xsd:element ref="SecurityMetadata"/>
+			<xsd:element ref="ds:Signature" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" use="required"/>
+		<xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+	</xsd:complexType>
+
+	<!-- Capability and Security Information: Scheme data  -->
+	<xsd:element name="SchemeData" type="SchemeDataType"/>
+	<xsd:complexType name="SchemeDataType">
+		<xsd:sequence>
+			<xsd:element name="CSIVersionIdentifier" type="xsd:integer"/>
+			<xsd:element name="CSISequenceNumber" type="xsd:positiveInteger"/>
+			<xsd:element name="CSISchemeOperatorName" type="tl:InternationalNamesType"/>
+			<xsd:element name="CSISchemeOperatorAddress" type="tl:AddressType"/>
+			<xsd:element name="CSISchemeInformationURI" type="tl:NonEmptyMultiLangURIListType"/>
+			<xsd:element name="CSISchemePolicyCommunityRules" type="tl:NonEmptyMultiLangURIListType"/>
+			<xsd:element name="CSIPointerToTL" type="tl:NonEmptyURIType"/>
+			<xsd:element name="CSIIssueDateTime" type="xsd:dateTime"/>
+			<xsd:element name="CSINextUpdate" type="tl:NextUpdateType"/>
+			<xsd:element name="CSIDistributionPoints" type="tl:NonEmptyURIListType"/>
+			<xsd:element name="CSIPointersToOtherMetadata" type="tl:NonEmptyURIListType" minOccurs="0"/>
+			<xsd:element name="CSISchemeExtensions" type="tl:ExtensionsListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Capability Information (CI) -->
+	<xsd:element name="CapabilityMetadata" type="CapabilityMetadataType"/>
+	<xsd:complexType name="CapabilityMetadataType">
+		<xsd:sequence>
+			<!-- The following is from ETSI EN 319 532-4, clause C.2.3.4.2 -->
+			<xsd:element ref="ci:ERDSMetadata"/>
+			<xsd:element name="CISchemeExtensions" type="tl:ExtensionsListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Security Information (SI) -->
+	<xsd:element name="SecurityMetadata" type="SecurityMetadataType"/>
+	<xsd:complexType name="SecurityMetadataType">
+		<xsd:sequence>
+			<!-- The following is from ETSI EN 319 532-4, clause C.2.3.4.4 -->
+			<xsd:element ref="si:CapabilityBasedSecurity"/>
+			<xsd:element name="SISchemeExtensions" type="tl:ExtensionsListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="CapabilityBasedSecurity" type="si:CapabilityBasedSecurityType"/>
+	<xsd:complexType name="CapabilityBasedSecurityType">
+		<xsd:sequence>
+			<!-- X509Certificate used for TLS specified in EN 319 532-4, clause C.2.3.4.4 for Basic handshake -->
+			<xsd:element name="TLSCertificate" type="xsd:base64Binary"/>
+			<!-- X509Certificate used for Domain Signature specified in EN 319 532-4, clause C.2.3.4.4 -->
+			<xsd:element name="DomainSignCertificate" type="xsd:base64Binary" minOccurs="0"/>
+			<xsd:element name="CBSSchemeExtensions" type="tl:ExtensionsListType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" use="required"/>
+	</xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,46 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1211551871 (0x4836d07f)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=GlobalERDS Root CA
+        Validity
+            Not Before: Nov 22 20:29:17 2021 GMT
+            Not After : Oct  3 20:29:17 2037 GMT
+        Subject: C=CC, O=GlobalERDS, OU=GlobalERDS test services, CN=GlobalERDS Intermediate CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (4096 bit)
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier: 
+                FA:40:3E:FE:74:C5:07:7D:71:7E:F3:C3:DA:31:59:A3:E0:31:60:BC
+            X509v3 Authority Key Identifier: 
+                keyid:97:B1:81:22:3A:F7:60:1D:E3:42:3F:D3:75:A9:7C:36:15:9D:B8:78
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Certificate Policies: 
+                Policy: 0.4.0.195222
+                  CPS: http://uri.etsi.org/19522/v1#
+                  User Notice:
+                    Organization: CC supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for ERDS services by supervision authority of country CC
+                Policy: 0.4.0.195223
+                  CPS: http://uri.etsi.org/19522/v1#ERDSEvidence
+                  User Notice:
+                    Organization: CC supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for ERDS evidence by supervision authority of country CC
+                Policy: 0.4.0.195324
+                  CPS: http://uri.etsi.org/19532/v1#/REMbaseline
+                  CPS: https://CC-remid-authority.cc/remid-policy-en#certificate-policy
+                  User Notice:
+                    Organization: CC supervision authority
+                    Number: 1
+                    Explicit Text: Test certification policy defined for REM baseline service by supervision authority of country CC
+
+    Signature Algorithm: sha256WithRSAEncryption

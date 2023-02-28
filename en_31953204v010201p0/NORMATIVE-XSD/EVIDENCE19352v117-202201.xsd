@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--                  ****** NOTICE ******
+The present document is part of ETSI EN 319 532-4 and represents:
+  1. the namespaces definitions and
+  2. the required imports for REM baseline ERDS evidence schema (Evidence) are composed of:
+     - ERDSEvidence
+     - ERDSExtensions
+     - eIDAS SAML Attribute Profile for Legal and Natural PersonIdentifier
+-->
+
+<xs:schema targetNamespace="http://uri.etsi.org/19532/v1#"
+		xmlns="http://uri.etsi.org/19532/v1#"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<!-- *** Imports facility section *** -->
+
+	<!-- schemaLocation="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd"/> -->
+	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+		schemaLocation="xmldsig-core-schema.xsd"/>
+
+	<!-- schemaLocation="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd"/> -->
+	<xs:import namespace="http://www.w3.org/2001/04/xmlenc#"
+		schemaLocation="xenc-schema.xsd"/>
+
+	<!-- schemaLocation="http://www.w3.org/2001/xml.xsd"/> -->
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+		schemaLocation="xml.xsd"/>
+
+	<!-- schemaLocation="http://docs.oasis-open.org/security/saml/v2.0/saml-schema-assertion-2.0.xsd"/> -->
+	<xs:import namespace="urn:oasis:names:tc:SAML:2.0:assertion"
+		schemaLocation="saml-schema-assertion-2.0.xsd"/>
+
+	<!-- schemaLocation="http://uri.etsi.org/19612/v2.2.1/ts_119612v020201_201601xsd.xsd"/> -->
+	<xs:import namespace="http://uri.etsi.org/02231/v2#"
+		schemaLocation="ts_119612v020201_201601xsd.xsd"/>
+
+	<!-- xsd from 'eIDAS SAML Attribute Profile v1.2.pdf' for Legal PersonIdentifier definitions, section 2.3.2 - Figure 11 -->
+	<xs:import namespace="http://eidas.europa.eu/attributes/legalperson"
+		schemaLocation="eIDAS_SAML_Attribute_Profile-LegalPersonIdentifiers-v1.1.2.xsd"/>
+
+	<!-- xsd from 'eIDAS SAML Attribute Profile v1.2.pdf' for Natural PersonIdentifier definitions, section 2.2.2 - Figure 1 -->
+	<xs:import namespace="http://eidas.europa.eu/attributes/naturalperson"
+		schemaLocation="eIDAS_SAML_Attribute_Profile-NaturalPersonIdentifiers-v1.1.2.xsd"/>
+
+	<!-- Note: the document 'eIDAS SAML Attribute Profile v1.2.pdf' containing the xsd for the previous two imports is available at: https://ec.europa.eu/cefdigital/wiki/download/attachments/82773108/eIDAS%20SAML%20Attribute%20Profile%20v1.2%20Final.pdf?version=2&modificationDate=1571068651772&api=v2 -->
+
+	<!-- *** ROOT Element: Evidence *** -->
+	<xs:import namespace="http://uri.etsi.org/19522/v1#"
+		schemaLocation="ERDS19522v111-201902v0.0.5.xsd"/>
+	<!-- Note: the document 'en_31952203v010101p0.zip' containing the xsd for the previous import is available at: https://www.etsi.org/deliver/etsi_en/319500_319599/31952203/01.01.01_60/en_31952203v010101p0.zip -->
+
+	<!-- *** (ERDS evidence) EXTENSIONS *** -->
+
+	<!-- *** GeneralEvidenceInfo Element: General ERDS evidence extension elements *** -->
+
+	<xs:element name="GeneralEvidenceInfo" type="GeneralEvidenceInfoType"/>
+
+	<xs:complexType name="GeneralEvidenceInfoType">
+		<xs:annotation>
+			<xs:documentation>The GeneralEvidenceInfo's Subject child element contains the Subject of the original message. Each UntrustedPathToRecipient child element identifies, with a integer reference, the recipient among all the recipients whose reachability by CSI is not verified.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Subject" type="xs:string" minOccurs="0"/>
+			<xs:element name="UntrustedPathToRecipient" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- *** RelayEvidenceInfo Element: Relay ERDS evidence extension elements *** -->
+
+	<xs:element name="RelayEvidenceInfo" type="RelayEvidenceInfoType"/>
+
+	<xs:complexType name="RelayEvidenceInfoType">
+		<xs:annotation>
+			<xs:documentation>Each RelayEvidenceRefersTo child element identifies, with a integer reference, one of the intended recipients whose the relay evidence refers to, among all the RecipientDetails occurrences. 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="RelayEvidenceRefersTo" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

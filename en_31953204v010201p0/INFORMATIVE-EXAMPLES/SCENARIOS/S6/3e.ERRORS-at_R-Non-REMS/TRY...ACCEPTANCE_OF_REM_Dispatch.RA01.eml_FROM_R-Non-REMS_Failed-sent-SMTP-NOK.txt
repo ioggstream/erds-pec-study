@@ -1,0 +1,2 @@
+Some impediment prevents the delivery of the REM dispatch to this Non-REM service provider. The SMTP transaction is not closed with a positive return code.
+It is a local/best practice matter if and how map this error to a RelayToNonERDSFailure(RF03), since this event doesn't affect the interoperability between REMSPs.

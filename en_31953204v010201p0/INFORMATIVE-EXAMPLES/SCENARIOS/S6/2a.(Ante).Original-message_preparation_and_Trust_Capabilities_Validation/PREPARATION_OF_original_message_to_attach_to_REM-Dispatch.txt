@@ -1,0 +1,2 @@
+See the POINTS_OF_ATTENTION section of the present suite of examples with
+the notes on the preparation of original message to attach to the REM dispatch.
