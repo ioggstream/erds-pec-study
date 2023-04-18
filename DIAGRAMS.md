@@ -115,7 +115,7 @@ Dispatch & Receipt -.-> |a| REM:Envelope -->|contains| REM:Headers
 %% https://www.etsi.org/deliver/etsi_en/319500_319599/31953204/01.01.07_20/en_31953204v010107a.pdf
 RelayMetadata -.-> |a| REM:Headers
 Dispatch -->|contains| REM:Headers & UserContent & RelayMetadata  & ERDS:Evidence
-Receipt -->|contains| REM:Headers & RelayMetadata & ERDS:Evidence  
+Receipt -->|contains| REM:Headers & RelayMetadata & ERDS:Evidence
 ERDS:Evidence -.-o|"hash of (Dispatch)"| UserContent
 ERDS:Evidence -->|contains| Timestamp
 ERDS:Evidence -.-o|contains| REM:Headers
@@ -130,9 +130,9 @@ click RelayMetadata "https://www.etsi.org/deliver/etsi_en/319500_319599/31953204
 La struttura dei messaggi REM e PEC è simile:
 
 1. il media type è `multipart/signed; protocol="application/pkcs7-signature"` che contiene:
-    
+
     a. un `multipart/mixed`
-    
+
     b. una pcks7-signature (smime.p7s)
 
 2. il multipart/mixed 1.a. contiene:
@@ -142,7 +142,7 @@ La struttura dei messaggi REM e PEC è simile:
     b. un XML con dei dati certificati (daticert.xml o ERDS:Evidence)
 
 ```mermaid
-graph 
+graph
 
 subgraph signed_message["multipart/signed;<br> prototocol=application/pkcs7-signature<br>name=smime.p7s"]
 end
@@ -164,4 +164,3 @@ A differenza della PEC:
 
 1. il daticert.xml non è firmato, ma si basa sulla firma del messaggio completo. Invece l'ERFS:Evidence è firmata.
 2. la REM supporta una ulteriore sezione chiamata REM:Extension con media type `xml` o `octect-stream`. Questa sezione viene utilizzata dal profilo italiano `rem-policy-it` per inserire ulteriori informazioni non supportate dal profilo REM base.
-

@@ -1,0 +1,36 @@
+references:
+  - name: ETSI EN 319 532-1 V1.1.1
+    title: REM - Part 1 Framework and architecture
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31953201/01.01.01_60/en_31953201v010101p.pdf
+  - name: ETSI EN 319 532-2 V1.1.1
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31953202/01.01.01_60/en_31953202v010101p.pdf
+    title: REM - Part 2 Semantic contents
+  - name: ETSI EN 319 532-3 V1.2.1
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31953203/01.02.01_60/en_31953203v010201p.pdf
+    title: REM - Part 3 Formats
+  - name: ETSI EN 319 532-4 V1.2.1 (2022-05)
+    title: REM - Part 4 Interoperability profiles (including the new REM baseline)
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31953204/01.02.01_60/en_31953204v010201p.pdf
+
+  - name: ETSI EN 319 532-4 V1.2.1 (2022-05)
+    title: REM - Part 4 Interoperability profiles (download ZIP with XSD and INFORMATIVE-WORKING-EXAMPLES)
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31953204/01.02.01_60/en_31953204v010201p0.zip
+  - name: ETSI EN 319 522-1 V1.1.1
+    title: ERDS - Part 1 Framework and architecture
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31952201/01.01.01_60/en_31952201v010101p.pdf
+  - name: ETSI EN 319 522-2 V1.1.1
+    title: ERDS - Part 2 Semantic contents
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31952202/01.01.01_60/en_31952202v010101p.pdf
+  - name: ETSI EN 319 522-3 V1.1.1
+    title: ERDS - Part 3 Formats
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/31952203/01.01.01_60/en_31952203v010101p.pdf
+
+  - name: ETSI EN 319 521 V1.1.1
+    title: Policy and security requirements for ERDSP
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/319521/01.01.01_60/en_319521v010101p.pdf
+  - name: ETSI EN 319 531 V1.1.1
+    title: Policy and security requirements for REMSP
+    url: https://www.etsi.org/deliver/etsi_en/319500_319599/319531/01.01.01_60/en_319531v010101p.pdf
+  - name: ETSI EN 319 411-1 V1.3.1
+    title: Policy and security requirements for TSP
+    url: https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.03.01_60/en_31941101v010301p.pdf
